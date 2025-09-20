@@ -1,0 +1,306 @@
+.welcome-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(135deg, var(--india-saffron) 0%, var(--india-white) 50%, var(--india-green) 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated background circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  background-color: var(--india-navy);
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  background-color: var(--india-blue);
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--india-green);
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+/* Flag Animation */
+.flag-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.flag-stripe {
+  width: 100%;
+  height: 33.33%;
+  animation: slideIn 2s ease-out;
+}
+
+.flag-stripe.saffron {
+  background-color: var(--india-saffron);
+  animation-delay: 0.2s;
+}
+
+.flag-stripe.white {
+  background-color: var(--india-white);
+  animation-delay: 0.4s;
+}
+
+.flag-stripe.green {
+  background-color: var(--india-green);
+  animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.3;
+  }
+}
+
+/* Ashoka Chakra */
+.chakra-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.chakra {
+  width: 80px;
+  height: 80px;
+  border: 3px solid var(--india-navy);
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 8s linear infinite;
+}
+
+.chakra-spoke {
+  position: absolute;
+  width: 2px;
+  height: 35px;
+  background-color: var(--india-navy);
+  left: 50%;
+  top: 50%;
+  transform-origin: center bottom;
+}
+
+.chakra-spoke:nth-child(1) { transform: translateX(-50%) rotate(0deg); }
+.chakra-spoke:nth-child(2) { transform: translateX(-50%) rotate(45deg); }
+.chakra-spoke:nth-child(3) { transform: translateX(-50%) rotate(90deg); }
+.chakra-spoke:nth-child(4) { transform: translateX(-50%) rotate(135deg); }
+.chakra-spoke:nth-child(5) { transform: translateX(-50%) rotate(180deg); }
+.chakra-spoke:nth-child(6) { transform: translateX(-50%) rotate(225deg); }
+.chakra-spoke:nth-child(7) { transform: translateX(-50%) rotate(270deg); }
+.chakra-spoke:nth-child(8) { transform: translateX(-50%) rotate(315deg); }
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Welcome Text */
+.welcome-text {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.word {
+  display: inline-block;
+  margin: 0 8px;
+  animation: bounceInDown 0.8s ease-out;
+}
+
+.word-1 {
+  color: var(--india-saffron);
+  animation-delay: 0.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.word-2 {
+  color: var(--india-navy);
+  animation-delay: 0.7s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.word-3 {
+  color: var(--india-green);
+  animation-delay: 0.9s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.word-4 {
+  color: var(--india-navy);
+  animation-delay: 1.1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  color: var(--india-navy);
+  font-weight: 500;
+  animation: fadeInUp 1s ease-out 1.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Government Logo */
+.gov-logo {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.logo-emblem {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.emblem-circle {
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--india-navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--india-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.emblem-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--india-navy);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+  
+  .chakra {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .chakra-spoke {
+    height: 25px;
+  }
+  
+  .circle-1, .circle-2, .circle-3 {
+    transform: scale(0.8);
+  }
+}

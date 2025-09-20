@@ -1,0 +1,79 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
+  padding: 20px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000080;
+}
+
+.login-header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.login-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.input-box input[type="text"],
+.input-box input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.image-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+  border: 2px solid #000080;
+}
+
+.file-name-preview {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.verify-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #000080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.verify-button:hover {
+  background-color: #00005a;
+}

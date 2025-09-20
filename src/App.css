@@ -1,0 +1,264 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px var(--shadow);
+  background-color: var(--india-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.content-area {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Loading Screen */
+.loading-screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--india-saffron), var(--india-white), var(--india-green));
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background: linear-gradient(135deg, var(--india-saffron), var(--india-white), var(--india-green));
+  }
+  50% {
+    background: linear-gradient(135deg, var(--india-green), var(--india-white), var(--india-saffron));
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.spinner-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: spinnerBounce 1.4s ease-in-out infinite both;
+}
+
+.spinner-circle:nth-child(1) {
+  background-color: var(--india-saffron);
+  animation-delay: -0.32s;
+}
+
+.spinner-circle:nth-child(2) {
+  background-color: var(--india-white);
+  animation-delay: -0.16s;
+  border: 1px solid var(--gray-medium);
+}
+
+.spinner-circle:nth-child(3) {
+  background-color: var(--india-green);
+  animation-delay: 0s;
+}
+
+@keyframes spinnerBounce {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.loading-text {
+  font-size: 16px;
+  color: var(--india-navy);
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: var(--india-navy);
+  color: var(--india-white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.settings-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Screen Transitions */
+.content-area > * {
+  animation: slideInFromBottom 0.5s ease-out;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .app {
+    max-width: 100%;
+    box-shadow: none;
+  }
+  
+  .app-branding {
+    max-width: 100%;
+    padding: 6px 12px;
+  }
+  
+  .branding-text {
+    padding: 4px 8px;
+  }
+  
+  .brand-hindi {
+    font-size: 12px;
+  }
+  
+  .brand-english {
+    font-size: 7px;
+  }
+  
+  .branding-flag {
+    width: 20px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .app-branding {
+    padding: 4px 8px;
+  }
+  
+  .branding-text {
+    padding: 3px 6px;
+  }
+  
+  .brand-hindi {
+    font-size: 11px;
+  }
+  
+  .brand-english {
+    font-size: 6px;
+  }
+  
+  .branding-flag {
+    width: 18px;
+    height: 12px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .content-area > *,
+  .loading-spinner,
+  .loading-text,
+  .app-branding {
+    animation: none;
+  }
+  
+  .loading-screen {
+    background: var(--india-white);
+  }
+}
+
+/* Dark Mode Support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  .app {
+    /* Keep government colors consistent regardless of dark mode preference */
+    color-scheme: light;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .app {
+    border: 2px solid var(--india-navy);
+  }
+  
+  .branding-text {
+    border: 2px solid var(--india-navy);
+    background-color: var(--india-white);
+  }
+  
+  .loading-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Focus Management */
+.app:focus-within {
+  outline: 2px solid var(--india-saffron);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .app-branding,
+  .loading-screen {
+    display: none;
+  }
+  
+  .app {
+    box-shadow: none;
+    background: white;
+  }
+}
+
+/* Landscape Orientation on Mobile */
+@media (orientation: landscape) and (max-height: 600px) {
+  .app-branding {
+    padding: 4px 12px;
+  }
+  
+  .branding-text {
+    padding: 2px 6px;
+  }
+  
+  .brand-hindi {
+    font-size: 10px;
+  }
+  
+  .brand-english {
+    font-size: 6px;
+  }
+}

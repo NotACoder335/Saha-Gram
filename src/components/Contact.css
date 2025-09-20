@@ -1,0 +1,561 @@
+.contact-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, var(--gray-light) 0%, var(--india-white) 100%);
+  overflow: hidden;
+}
+
+/* Header Styles */
+.contact-header {
+  background: linear-gradient(135deg, var(--india-navy), var(--india-blue));
+  color: var(--india-white);
+  padding: 16px;
+  box-shadow: 0 2px 8px var(--shadow);
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.header-icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.header-info {
+  flex: 1;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header-subtitle {
+  font-size: 12px;
+  margin: 2px 0 0 0;
+  opacity: 0.9;
+}
+
+.header-emblem {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.emblem-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--india-white);
+}
+
+.emblem-text {
+  font-size: 20px;
+}
+
+.header-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--india-saffron), var(--india-white), var(--india-green));
+}
+
+/* Navigation Tabs */
+.contact-nav {
+  display: flex;
+  background-color: var(--india-white);
+  border-bottom: 1px solid var(--gray-medium);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.nav-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 128, 0.1);
+  color: var(--india-navy);
+}
+
+.nav-btn.active {
+  color: var(--india-navy);
+  background-color: rgba(0, 0, 128, 0.1);
+}
+
+.nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--india-navy), var(--india-blue));
+}
+
+.nav-icon {
+  font-size: 16px;
+}
+
+/* Content Area */
+.contact-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  padding-bottom: 120px; /* Space for footer and bottom nav */
+}
+
+/* Emergency Contacts */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.emergency-card {
+  background-color: var(--india-white);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--shadow);
+  border: 2px solid #FF4757;
+  animation: slideInUp 0.6s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.emergency-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.emergency-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  animation: bounce 2s infinite;
+}
+
+.emergency-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--india-navy);
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.emergency-name-en {
+  font-size: 11px;
+  color: var(--gray-dark);
+  margin: 0 0 8px 0;
+  font-style: italic;
+}
+
+.emergency-phone {
+  margin: 8px 0;
+}
+
+.phone-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF4757, #FF6B7A);
+  color: var(--india-white);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.phone-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 71, 87, 0.3);
+}
+
+.emergency-description {
+  font-size: 11px;
+  color: var(--gray-dark);
+  margin: 8px 0;
+  line-height: 1.3;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--india-green);
+  font-weight: 500;
+}
+
+.availability-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--india-green);
+  border-radius: 50%;
+  animation: pulse-green 2s infinite;
+}
+
+/* Department Contacts */
+.department-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.department-card {
+  background-color: var(--india-white);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--gray-medium);
+  animation: slideInUp 0.6s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+.dept-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--india-saffron), var(--light-saffron));
+  color: var(--india-white);
+}
+
+.dept-icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.dept-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dept-name-en {
+  font-size: 12px;
+  margin: 2px 0 0 0;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.dept-content {
+  padding: 16px;
+}
+
+.contact-person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: var(--gray-light);
+  border-radius: 8px;
+}
+
+.person-icon {
+  font-size: 18px;
+}
+
+.person-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--india-navy);
+  margin: 0;
+}
+
+.person-designation {
+  font-size: 12px;
+  color: var(--gray-dark);
+  margin: 2px 0 0 0;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.contact-icon {
+  font-size: 14px;
+  width: 20px;
+}
+
+.contact-link {
+  color: var(--india-blue);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--india-navy);
+  text-decoration: underline;
+}
+
+.contact-text {
+  font-size: 13px;
+  color: var(--gray-dark);
+  line-height: 1.3;
+}
+
+/* Helpline Contacts */
+.helpline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.helpline-card {
+  background-color: var(--india-white);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px var(--shadow);
+  border: 1px solid var(--gray-medium);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideInUp 0.6s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.helpline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.helpline-icon {
+  font-size: 24px;
+  padding: 8px;
+  background: linear-gradient(135deg, var(--india-blue), var(--india-navy));
+  border-radius: 50%;
+  color: var(--india-white);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helpline-content {
+  flex: 1;
+}
+
+.helpline-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--india-navy);
+  margin: 0 0 2px 0;
+}
+
+.helpline-name-en {
+  font-size: 11px;
+  color: var(--gray-dark);
+  margin: 0 0 6px 0;
+  font-style: italic;
+}
+
+.helpline-phone .phone-link {
+  background: linear-gradient(135deg, var(--india-blue), var(--india-navy));
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.helpline-description {
+  font-size: 11px;
+  color: var(--gray-dark);
+  margin: 4px 0 0 0;
+}
+
+/* Footer */
+.contact-footer {
+  background-color: var(--india-white);
+  padding: 16px;
+  border-top: 1px solid var(--gray-medium);
+  box-shadow: 0 -2px 8px var(--shadow);
+}
+
+.footer-section {
+  margin-bottom: 16px;
+}
+
+.footer-section:last-child {
+  margin-bottom: 0;
+}
+
+.footer-section h4 {
+  font-size: 14px;
+  color: var(--india-navy);
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  font-size: 11px;
+  color: var(--gray-dark);
+  margin-bottom: 4px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.footer-section li::before {
+  content: '•';
+  color: var(--india-saffron);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.digital-services {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.service-btn {
+  background: linear-gradient(135deg, var(--india-green), var(--light-green));
+  border: none;
+  color: var(--india-white);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(19, 136, 8, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(19, 136, 8, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(19, 136, 8, 0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 360px) {
+  .contact-content {
+    padding: 12px;
+  }
+  
+  .contacts-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .emergency-card {
+    padding: 12px;
+  }
+  
+  .emergency-icon {
+    font-size: 28px;
+  }
+  
+  .department-card {
+    margin-bottom: 12px;
+  }
+  
+  .dept-header {
+    padding: 12px;
+  }
+  
+  .dept-content {
+    padding: 12px;
+  }
+  
+  .helpline-card {
+    padding: 12px;
+  }
+  
+  .contact-footer {
+    padding: 12px;
+  }
+  
+  .digital-services {
+    justify-content: center;
+  }
+}
+
+/* Scrollbar Styling */
+.contact-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.contact-content::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+.contact-content::-webkit-scrollbar-thumb {
+  background: var(--india-navy);
+  border-radius: 2px;
+}
+
+.contact-content::-webkit-scrollbar-thumb:hover {
+  background: var(--india-blue);
+}
