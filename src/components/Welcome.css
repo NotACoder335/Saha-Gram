@@ -124,6 +124,9 @@
   border-radius: 50%;
   position: relative;
   animation: rotate 8s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chakra-spoke {
@@ -134,16 +137,17 @@
   left: 50%;
   top: 50%;
   transform-origin: center bottom;
+  transform: translate(-50%, -100%);
 }
 
-.chakra-spoke:nth-child(1) { transform: translateX(-50%) rotate(0deg); }
-.chakra-spoke:nth-child(2) { transform: translateX(-50%) rotate(45deg); }
-.chakra-spoke:nth-child(3) { transform: translateX(-50%) rotate(90deg); }
-.chakra-spoke:nth-child(4) { transform: translateX(-50%) rotate(135deg); }
-.chakra-spoke:nth-child(5) { transform: translateX(-50%) rotate(180deg); }
-.chakra-spoke:nth-child(6) { transform: translateX(-50%) rotate(225deg); }
-.chakra-spoke:nth-child(7) { transform: translateX(-50%) rotate(270deg); }
-.chakra-spoke:nth-child(8) { transform: translateX(-50%) rotate(315deg); }
+.chakra-spoke:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); }
+.chakra-spoke:nth-child(2) { transform: translate(-50%, -100%) rotate(45deg); }
+.chakra-spoke:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg); }
+.chakra-spoke:nth-child(4) { transform: translate(-50%, -100%) rotate(135deg); }
+.chakra-spoke:nth-child(5) { transform: translate(-50%, -100%) rotate(180deg); }
+.chakra-spoke:nth-child(6) { transform: translate(-50%, -100%) rotate(225deg); }
+.chakra-spoke:nth-child(7) { transform: translate(-50%, -100%) rotate(270deg); }
+.chakra-spoke:nth-child(8) { transform: translate(-50%, -100%) rotate(315deg); }
 
 @keyframes rotate {
   from {

@@ -7,7 +7,7 @@
 }
 
 .announcements-container {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background: linear-gradient(180deg, var(--gray-light) 0%, var(--india-white) 100%);
@@ -20,7 +20,9 @@
   color: var(--india-white);
   padding: 16px;
   box-shadow: 0 2px 8px var(--shadow);
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-content {
