@@ -42,7 +42,8 @@
 
 ## 📹 Demo Video
 
-See Saha Gram in action:
+See Saha Gram in action:<br>
+Demo video can be dowloaded from src/Demo video/Saha-Gram Demo.mp4
 <video src="src/Demo%20video/Saha-Gram%20Demo.mp4" controls width="100%"></video>
 ## 🚀 Getting Started
 
