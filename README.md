@@ -1,22 +1,22 @@
-# Saha Gram - Digital Village Platform
+# Saha Gram - Digital Village Communication Platform
 
-A WhatsApp-like mobile application designed for Indian villages to facilitate government communication, complaints, and community discussions. Built with React.js using authentic Indian government design principles and color schemes.
 
-## 🇮🇳 Features
+
+
+## Features
 
 ### 🎨 **Authentic Indian Government Design**
 - Official Indian government color scheme (Saffron, White, Green, Navy Blue)
-- Figma Gov India inspired icons and layout
 - Responsive design optimized for mobile devices
 - Hindi & English bilingual support
 
 ### 📱 **Four Main Sections**
 
 1. **🗣️ Discussion (चर्चा)**
-   - WhatsApp-like chat interface
-   - Community discussions
-   - Real-time messaging simulation
-   - Government moderation
+   - WhatsApp-like chat interface for familarity to users
+   - Community discussions with moderators picked from the users for having a respectable conversation ground.
+   - Real-time messaging platform with support for upto 100k users
+   - AI Discussion Summmary
 
 2. **📋 Announcements (घोषणाएं)**
    - Official government announcements
@@ -38,9 +38,12 @@ A WhatsApp-like mobile application designed for Indian villages to facilitate go
 
 ### ✨ **Welcome Screen**
 - Animated "Welcome to Saha Gram" with government colors
-- Indian flag animation with Ashoka Chakra
-- Smooth transitions and government branding
+- Smooth transitions and well optimised
 
+## 📹 Demo Video
+
+See Saha Gram in action:
+<video src="src/Demo%20video/Saha-Gram%20Demo.mp4" controls width="100%"></video>
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -102,24 +105,6 @@ Sahagram/
 └── README.md
 ```
 
-## 🎨 Design System
-
-### Color Palette
-- **Saffron**: #FF9933 (Primary actions, highlights)
-- **White**: #FFFFFF (Backgrounds, text contrast)
-- **Green**: #138808 (Success states, nature elements)
-- **Navy Blue**: #000080 (Text, headers, official elements)
-- **Light Blue**: #4F94CD (Secondary actions, links)
-
-### Typography
-- **Primary**: System fonts (Segoe UI, Roboto, etc.)
-- **Hindi Support**: Native system fonts
-- **Font Weights**: 400 (regular), 500 (medium), 600 (semibold), 700 (bold)
-
-### Icons
-- Government-inspired emoji icons
-- Consistent 16px-24px sizing
-- Accessibility-compliant contrast ratios
 
 ## 📱 Mobile Optimization
 
@@ -134,38 +119,6 @@ Sahagram/
 - **Mobile Browsers**: iOS Safari, Chrome Mobile, Samsung Internet
 - **Progressive Enhancement**: Graceful degradation for older browsers
 
-## 🔧 Customization
-
-### Adding New Departments
-Edit the contact information in `src/components/Contact.js`:
-
-```javascript
-const departmentContacts = [
-  {
-    name: 'Your Department Name',
-    name_en: 'English Name',
-    // ... other properties
-  }
-];
-```
-
-### Modifying Colors
-Update CSS variables in `src/index.css`:
-
-```css
-:root {
-  --india-saffron: #FF9933;
-  --india-green: #138808;
-  /* Add your custom colors */
-}
-```
-
-### Adding New Announcement Categories
-Modify the categories in `src/components/Complaints.js`:
-
-```javascript
-<option value="YourCategory">Your Category / English Translation</option>
-```
 
 ## 🔒 Security Considerations
 
@@ -186,12 +139,6 @@ Modify the categories in `src/components/Complaints.js`:
 
 This project is designed for educational and demonstration purposes. Government design elements are used in accordance with public domain guidelines.
 
-## 🙏 Acknowledgments
-
-- **Government of India** for design inspiration
-- **Figma Gov India** design system
-- **React.js** community for excellent documentation
-- **CSS Grid & Flexbox** for responsive layouts
 
 ## 📞 Support
 
@@ -201,7 +148,6 @@ For technical support or queries:
 - Include browser and device information
 
 ---
+<br>
+<center>Built with ❤️ for Digital India Initiative </center>
 
-**Built with ❤️ for Digital India Initiative**
-
-*सहा ग्राम - डिजिटल गांव मंच*
