@@ -1,8 +1,6 @@
 # Saha Gram - Digital Village Communication Platform
 
 
-
-
 ## Features
 
 ### 🎨 **Authentic Indian Government Design**
@@ -36,15 +34,14 @@
    - Government helplines
    - Digital services integration
 
-### ✨ **Welcome Screen**
-- Animated "Welcome to Saha Gram" with government colors
-- Smooth transitions and well optimised
+
 
 ## 📹 Demo Video
 
 See Saha Gram in action:<br>
-Demo video can be dowloaded from src/Demo video/Saha-Gram Demo.mp4
-<video src="src/Demo%20video/Saha-Gram%20Demo.mp4" controls width="100%"></video>
+
+
+![Demo](src\Demo\demo.gif)
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -55,7 +52,7 @@ Demo video can be dowloaded from src/Demo video/Saha-Gram Demo.mp4
 
 1. **Navigate to project directory:**
    ```bash
-   cd "e:\app\Sahagram"
+   cd "\Sahagram"
    ```
 
 2. **Install dependencies:**
@@ -150,5 +147,5 @@ For technical support or queries:
 
 ---
 <br>
-<center>Built with ❤️ for Digital India Initiative </center>
+<center>Built with ❤️ and AI for Vibethon 2025 </center>
 
